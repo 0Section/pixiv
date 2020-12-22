@@ -47,7 +47,7 @@ def get_urls(search, page):
 
 
 if __name__ == "__main__":
-    urls = get_urls("summer", 500)
+    urls = get_urls("甘雨", 500)
     with futures.ThreadPoolExecutor(32) as executor:
         executor.map(crawl, urls)
     pprint(sorted(result, key=lambda v: v[1], reverse=True))    # 按star数降序排序
